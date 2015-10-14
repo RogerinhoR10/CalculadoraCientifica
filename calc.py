@@ -1,3 +1,5 @@
+import os
+
 def suma(a, b):
     return a + b
 
@@ -5,7 +7,7 @@ def resta():
         try:
                 num01 = eval(input("Número 01: "))
                 num02 = eval(input("Número 02: "))
-                #aux = num01 - num02    
+                #aux = num01 - num02
                 print ("La resta es: ", int(num01 - num02))
                 #return nombres
         except excepcion:
@@ -42,7 +44,8 @@ while opcion != 12:
     print ('{:^16}'.format('9. Coseno'))
     print ('{:^16}'.format('10. Tangente'))
     print ('{:^16}'.format('11. Inverso'))
-    print ('{:^16}'.format('12. Salir'))
+    print ('{:^16}'.format('12. Limpiar Pantalla'))
+    print ('{:^16}'.format('13. Salir'))
     if opcion == 1:
         a = eval(input("Valor a: "))
         b = eval(input("Valor b: "))
@@ -57,5 +60,8 @@ while opcion != 12:
         a = eval(input("Valor a: "))
         b = eval(input("Valor b: "))
         multi(a, b)
-        
+
+    if opcion == 12:
+        os.system('clear')
+
     opcion = eval(input("Ingresa opcion"))
