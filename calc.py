@@ -33,6 +33,14 @@ def logaritmo():
 	except error:
 		print("Ha ocurrido un error!")
 
+def tangente():
+	try:
+	num01 = eval(input("Tangente: "))
+	aux = math.tan(num01)
+	print ("El resultado es: ", float(aux))
+	except error:
+		print("Ha ocurrido un error!")
+
 opcion = 0
 while opcion != 12:
     print ('{:^16}'.format('Calculadora'))
