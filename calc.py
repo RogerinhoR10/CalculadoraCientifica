@@ -25,10 +25,13 @@ def multi(a, b):
     return a * b
 
 def logaritmo():
-        num01 = eval(input("Logaritmo: "))
-        num02 = eval(input("Base: "))
-        aux = math.log(num01, num02)
-        print ("El resultado es: ", float(aux))
+	try:
+ 		num01 = eval(input("Logaritmo: "))
+        	num02 = eval(input("Base: "))
+        	aux = math.log(num01, num02)
+        	print ("El resultado es: ", float(aux))
+	except error:
+		print("Ha ocurrido un error!")
 
 opcion = 0
 while opcion != 12:
