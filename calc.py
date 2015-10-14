@@ -68,6 +68,9 @@ while opcion != 12:
         b = eval(input("Valor b: "))
         suma(a, b)
 
+    if opcion == 2:
+        resta()
+
     if opcion == 3:
         a = eval(input("Valor a: "))
         b = eval(input("Valor b: "))
@@ -83,10 +86,16 @@ while opcion != 12:
         im= math.sin(math.radians(grados))
         print (" Resultado: ", im)
 
+    if opcion == 7:
+        logaritmo()
+
     if opcion == 9:
         grados = int(input("Ingresa grados "))
         im= math.cos(math.radians(grados))
         print (" Resultado: ", im)
+
+    if opcion == 10:
+        tangente()
 
     if opcion == 12:
         os.system('clear')
