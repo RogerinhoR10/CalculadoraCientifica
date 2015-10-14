@@ -55,6 +55,15 @@ def logaritmo():
     except NameError:
         print("Ha ocurrido un error!")
 
+
+def inverso(num1):
+    try:
+        print ('{:^16}'.format('Inverso: '))
+        print (' {} = {}'.format(num1, num1 * (-1)))
+        input(" ")
+    except ValueError:
+        print ("Introduzca solo numeros ")
+
 opcion = 0
 while opcion != 11:
     os.system('clear')
@@ -62,7 +71,7 @@ while opcion != 11:
     print ('{:^50}'.format('1. Suma'))
     print ('{:^50}'.format('2. Resta'))
     print ('{:^50}'.format('3. Division'))
-    print ('{:^50}'.format('4. Multiplicacion')))
+    print ('{:^50}'.format('4. Multiplicacion'))
     print ('{:^50}'.format('5. Exponente'))
     print ('{:^50}'.format('6. Log'))
     print ('{:^50}'.format('7. Seno'))
@@ -109,5 +118,7 @@ while opcion != 11:
         tangente()
 
     if opcion == 10:
+	a = eval(input("Valor: "))
+        inverso(a)
 
-    opcion = eval(input("Ingresa opcion"))
+    opcion = eval(input("Ingresa opcion: "))
