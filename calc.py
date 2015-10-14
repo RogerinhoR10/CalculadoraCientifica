@@ -118,7 +118,7 @@ while opcion != 11:
         tangente()
 
     if opcion == 10:
-	a = eval(input("Valor: "))
+        a = eval(input("Valor: "))
         inverso(a)
 
     opcion = eval(input("Ingresa opcion: "))
