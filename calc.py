@@ -22,6 +22,12 @@ def div(num1, num2):
 def multi(a, b):
     return a * b
 
+def logaritmo():
+        num01 = eval(input("Logaritmo: "))
+        num02 = eval(input("Base: "))
+        aux = math.log(num01, num02)
+        print ("El resultado es: ", float(aux))
+
 opcion = 0
 while opcion != 12:
     print ('{:^16}'.format('Calculadora'))
