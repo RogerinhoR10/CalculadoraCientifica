@@ -8,7 +8,7 @@ def div(num1, num2):
 	except ZeroDivisionError:
 		print ("Error: Divicion entre cero ")
 
-opcion = eval(input("Ingresa opcion"))
+opcion = 0
 while opcion != 12:
     print ('{:^16}'.format('Calculadora'))
     print ('{:^16}'.format('1. Suma'))
