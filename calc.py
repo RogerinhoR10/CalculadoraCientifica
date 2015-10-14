@@ -78,6 +78,11 @@ while opcion != 12:
         im= math.sin(math.radians(grados))
         print (" Resultado: ", im)
 
+    if opcion == 9:
+        grados = int(input("Ingresa grados "))
+        im= math.cos(math.radians(grados))
+        print (" Resultado: ", im)
+
     if opcion == 12:
         os.system('clear')
 
