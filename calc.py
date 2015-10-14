@@ -30,7 +30,7 @@ def div(num1, num2):
 def multi(a, b):
     return a * b
 
-def exponente(:):
+def exponente():
     try:
         num01 = eval(input("Número : "))
         num02 = eval(input("Exponente : "))
