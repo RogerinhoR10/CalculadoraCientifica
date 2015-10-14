@@ -1,6 +1,17 @@
 def suma(a, b):
     return a + b
 
+def resta():
+        try:
+                num01 = eval(input("Número 01: "))
+                num02 = eval(input("Número 02: "))
+                #aux = num01 - num02    
+                print ("La resta es: ", int(num01 - num02))
+                #return nombres
+        except excepcion:
+                print("Ha ocurrido un error!")
+
+
 def div(num1, num2):
 	try:
 		res = num1 / num2
