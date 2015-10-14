@@ -56,21 +56,20 @@ def logaritmo():
         print("Ha ocurrido un error!")
 
 opcion = 0
-while opcion != 12:
+while opcion != 11:
+    os.system('clear')
     print ('{:^50}'.format('Calculadora'))
     print ('{:^50}'.format('1. Suma'))
     print ('{:^50}'.format('2. Resta'))
     print ('{:^50}'.format('3. Division'))
-    print ('{:^50}'.format('4. Multiplicacion'))
-    print ('{:^50}'.format('5. Division'))
-    print ('{:^50}'.format('6. Exponente'))
-    print ('{:^50}'.format('7. Log'))
-    print ('{:^50}'.format('8. Seno'))
-    print ('{:^50}'.format('9. Coseno'))
-    print ('{:^50}'.format('10. Tangente'))
-    print ('{:^50}'.format('11. Inverso'))
-    print ('{:^50}'.format('12. Limpiar Pantalla'))
-    print ('{:^50}'.format('13. Salir'))
+    print ('{:^50}'.format('4. Multiplicacion')))
+    print ('{:^50}'.format('5. Exponente'))
+    print ('{:^50}'.format('6. Log'))
+    print ('{:^50}'.format('7. Seno'))
+    print ('{:^50}'.format('8. Coseno'))
+    print ('{:^50}'.format('9. Tangente'))
+    print ('{:^50}'.format('10. Inverso'))
+    print ('{:^50}'.format('11. Salir'))
 
     if opcion == 1:
         a = eval(input("Valor a: "))
@@ -90,26 +89,25 @@ while opcion != 12:
         b = eval(input("Valor b: "))
         multi(a, b)
 
-    if opcion == 8:
+    if opcion == 5:
+        exponente()
+
+    if opcion == 6:
+        logaritmo()
+
+    if opcion == 7:
         grados = int(input("Ingresa grados "))
         im= math.sin(math.radians(grados))
         print (" Resultado: ", im)
 
-    if opcion == 6
-        exponente()
-
-    if opcion == 7:
-        logaritmo()
-
-    if opcion == 9:
+    if opcion == 8:
         grados = int(input("Ingresa grados "))
         im= math.cos(math.radians(grados))
         print (" Resultado: ", im)
 
-    if opcion == 10:
+    if opcion == 9:
         tangente()
 
-    if opcion == 12:
-        os.system('clear')
+    if opcion == 10:
 
     opcion = eval(input("Ingresa opcion"))
