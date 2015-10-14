@@ -30,6 +30,14 @@ def div(num1, num2):
 def multi(a, b):
     return a * b
 
+def exponente(:):
+    try:
+        num01 = eval(input("Número : "))
+        num02 = eval(input("Exponente : "))
+        print ("El resultado es: ", int(num01 ** num02))
+    except NameError:
+            print("Ha ocurrido un error!")
+
 def tangente():
     try:
         num01 = eval(input("Tangente: "))
@@ -85,6 +93,9 @@ while opcion != 12:
         grados = int(input("Ingresa grados "))
         im= math.sin(math.radians(grados))
         print (" Resultado: ", im)
+
+    if opcion == 6
+        exponente()
 
     if opcion == 7:
         logaritmo()
