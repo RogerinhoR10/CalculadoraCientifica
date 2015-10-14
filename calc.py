@@ -8,6 +8,9 @@ def div(num1, num2):
 	except ZeroDivisionError:
 		print ("Error: Divicion entre cero ")
 
+def multi(a, b):
+    return a * b
+
 opcion = 0
 while opcion != 12:
     print ('{:^16}'.format('Calculadora'))
@@ -32,4 +35,10 @@ while opcion != 12:
         a = eval(input("Valor a: "))
         b = eval(input("Valor b: "))
         div(a, b)
+
+    if opcion == 4:
+        a = eval(input("Valor a: "))
+        b = eval(input("Valor b: "))
+        multi(a, b)
+        
     opcion = eval(input("Ingresa opcion"))
