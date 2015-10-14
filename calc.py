@@ -25,22 +25,22 @@ def div(num1, num2):
 def multi(a, b):
     return a * b
 
-def logaritmo():
-	try:
- 		num01 = eval(input("Logaritmo: "))
-        	num02 = eval(input("Base: "))
-        	aux = math.log(num01, num02)
-        	print ("El resultado es: ", float(aux))
-	except error:
-		print("Ha ocurrido un error!")
-
 def tangente():
-	try:
-	num01 = eval(input("Tangente: "))
-	aux = math.tan(num01)
-	print ("El resultado es: ", float(aux))
-	except error:
-		print("Ha ocurrido un error!")
+    try:
+        num01 = eval(input("Tangente: "))
+        aux = math.tan(num01)
+        print ("El resultado es: ", float(aux))
+    except NameError:
+        print("Ha ocurrido un error!")
+
+def logaritmo():
+    try:
+        num01 = eval(input("Logaritmo: "))
+        num02 = eval(input("Base: "))
+        aux = math.log(num01, num02)
+        print ("El resultado es: ", float(aux))
+    except NameError:
+        print("Ha ocurrido un error!")
 
 opcion = 0
 while opcion != 12:
