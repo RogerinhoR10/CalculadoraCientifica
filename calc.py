@@ -11,7 +11,7 @@ def resta():
                 #aux = num01 - num02
                 print ("La resta es: ", int(num01 - num02))
                 #return nombres
-        except excepcion:
+        except NameError:
                 print("Ha ocurrido un error!")
 
 
