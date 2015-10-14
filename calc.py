@@ -1,6 +1,13 @@
 def suma(a, b):
     return a + b
 
+def div(num1, num2):
+	try:
+		res = num1 / num2
+		print (" Resultado: ", res)
+	except ZeroDivisionError:
+		print ("Error: Divicion entre cero ")
+
 opcion = eval(input("Ingresa opcion"))
 while opcion != 12:
     print ('{:^16}'.format('Calculadora'))
@@ -20,4 +27,9 @@ while opcion != 12:
         a = eval(input("Valor a: "))
         b = eval(input("Valor b: "))
         suma(a, b)
+
+    if opcion == 3:
+        a = eval(input("Valor a: "))
+        b = eval(input("Valor b: "))
+        div(a, b)
     opcion = eval(input("Ingresa opcion"))
