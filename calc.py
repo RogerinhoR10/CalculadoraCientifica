@@ -1,8 +1,13 @@
 import os
 import math
 
-def suma(a, b):
-    return a + b
+def suma(num1, num2):
+    try:
+        print ('{:^16}'.format('SUMA'))
+        print ('{} + {} = {}'.format(num1, num2, num1 + num2))
+        input(" ")
+    except ValueError:
+        print ("Introduzca solo numeros ")
 
 def resta():
         try:
