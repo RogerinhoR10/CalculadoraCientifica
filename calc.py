@@ -1,4 +1,5 @@
 import os
+import math
 
 def suma(a, b):
     return a + b
@@ -71,6 +72,11 @@ while opcion != 12:
         a = eval(input("Valor a: "))
         b = eval(input("Valor b: "))
         multi(a, b)
+
+    if opcion == 8:
+        grados = int(input("Ingresa grados "))
+        im= math.sin(math.radians(grados))
+        print (" Resultado: ", im)
 
     if opcion == 12:
         os.system('clear')
