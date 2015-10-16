@@ -59,24 +59,48 @@ def validacioncon(contra):
         return False
 
 
-usuario = input("Usuario: ")
-valida = validacion(usuario)
-while valida is False:
+valida = False
+try:
     usuario = input("Usuario: ")
     valida = validacion(usuario)
+except (EOFError, KeyboardInterrupt):
+    print ("ERROR")
+while valida is False:
+    try:
+        usuario = input("Usuario: ")
+        valida = validacion(usuario)
+    except (EOFError, KeyboardInterrupt):
+        print ("ERROR")
 
-contra = input("Contraseña: ")
-validacon = validacioncon(contra)
-while validacon is False:
+validacon = False
+try:
     contra = input("Contraseña: ")
     validacon = validacioncon(contra)
+except (EOFError, KeyboardInterrupt):
+    print ("ERROR")
+while validacon is False:
+    try:
+        contra = input("Contraseña: ")
+        validacon = validacioncon(contra)
+    except (EOFError, KeyboardInterrupt):
+        print ("ERROR")
+
 os.system('clear')
 print ("Comprobando usuario y contraseña")
-vusuario = input("Ingrese usuario ")
-vcontra = input ("Ingrese contraseña ")
+
+vusuario = "usuario"
+vcontra = "contrasena"
+try:
+    vusuario = input("Ingrese usuario ")
+    vcontra = input("Ingrese contraseña ")
+except (EOFError, KeyboardInterrupt):
+    print ("ERROR")
 while vusuario != usuario or vcontra != contra:
     os.system('clear')
     print ("Usuario o contraseña incorrecto")
-    vusuario = input("Ingrese usuario ")
-    vcontra = input ("Ingrese contraseña ")
+    try:
+        vusuario = input("Ingrese usuario ")
+        vcontra = input("Ingrese contraseña ")
+    except (EOFError, KeyboardInterrupt):
+        print ("ERROR")
 print ("Bienvenido usuario y contraseña correctos")
