@@ -1,12 +1,26 @@
-
+import os
 
 def validacion(usuario):
     tam = len(usuario)
-    if tam < 12:
+    minusculas = 0
+    mayusculas = 0
+    numeros = 0
+    if tam < 13:
         if tam > 5:
             if usuario.isalnum():
-                print ("True")
-                return True
+                for letra in range(0, tam):
+                    if usuario[letra].islower():
+                        minusculas += 1
+                    elif usuario[letra].isupper():
+                        mayusculas += 1
+                    elif usuario[letra].isdigit():
+                        numeros += 1
+                if (minusculas == 0 and mayusculas == 0) or numeros == 0:
+                    print("El nombre de usuario debe contener letras y números")
+                    return False
+                else:
+                    print ("True")
+                    return True
             else:
                 print("El nombre de usuario solo puede contener letras y números")
                 return False
@@ -45,25 +59,24 @@ def validacioncon(contra):
         return False
 
 
-try:
+usuario = input("Usuario: ")
+valida = validacion(usuario)
+while valida is False:
     usuario = input("Usuario: ")
     valida = validacion(usuario)
-    while valida is False:
-        try:
-            usuario = input("Usuario: ")
-            valida = validacion(usuario)
-        except (EOFError, KeyboardInterrupt):
-            print("Error")
 
+contra = input("Contraseña: ")
+validacon = validacioncon(contra)
+while validacon is False:
     contra = input("Contraseña: ")
     validacon = validacioncon(contra)
-    while validacon is False:
-        try:
-            contra = input("Contraseña: ")
-            validacon = validacioncon(contra)
-        except (EOFError, KeyboardInterrupt):
-            print("Error")
-
-
-except (EOFError, KeyboardInterrupt):
-    print("Error")
+os.system('clear')
+print ("Comprobando usuario y contraseña")
+vusuario = input("Ingrese usuario ")
+vcontra = input ("Ingrese contraseña ")
+while vusuario != usuario or vcontra != contra:
+    os.system('clear')
+    print ("Usuario o contraseña incorrecto")
+    vusuario = input("Ingrese usuario ")
+    vcontra = input ("Ingrese contraseña ")
+print ("Bienvenido usuario y contraseña correctos")
